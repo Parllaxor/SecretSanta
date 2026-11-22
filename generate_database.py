@@ -46,9 +46,18 @@ def encrypt_data(data, password):
         "data": base64.b64encode(ciphertext).decode("utf-8")
     }
 
+def load_passwords():
+    with open(BASE_DIR / "passwords.json", "r", encoding="utf-8") as file:
+        return json.load(file)
 
 def generate_database():
     names = input_names()
+    passwords = load_passwords()
+
+    missing_passwords = [name for name in names if not passwords.get(name)]
+
+    if missing_passwords:
+        raise ValueError(f"Missing passwords for: {missing_passwords}")
 
     if len(names) != len(set(names)):
         raise ValueError("Duplicate participant names found")
@@ -69,8 +78,8 @@ def generate_database():
     credentials = []
 
     for name in names:
-        username = secrets.token_urlsafe(8)
-        password = secrets.token_urlsafe(16)
+        username = name.lower()
+        password = password = passwords[name]
 
         participant_data = {
             "name": name,
