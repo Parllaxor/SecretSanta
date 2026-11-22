@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Secret Santa 🎅</h1>
+        <p>Enter your credentials to reveal your Secret Santa assignment.</p>
+
+        <form id="login-form">
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                autocomplete="username"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">Reveal My Assignment</button>
+        </form>
+
+        <p id="message"></p>
+
+        <section id="result" hidden>
+            <h2>You're Secret Santa for...</h2>
+            <h1 id="recipient"></h1>
+            <p>Happy gifting! 🎁</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

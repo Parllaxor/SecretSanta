@@ -1,0 +1,12 @@
+# Private participant information
+credentials.txt
+names.txt
+output.txt
+
+# Python files
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
