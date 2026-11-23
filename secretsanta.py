@@ -4,7 +4,7 @@ blocked_assignments = (
     ("Katie", "Trevor", "Porter"),
     ("Devin", "Kimarie"),
     ("Taylor", "Clarissa"),
-    ("Trace", "Powy"),
+    ("Trace", "Powy", "Ace"),
     ("Shayann", "Jayson")
 )
 
