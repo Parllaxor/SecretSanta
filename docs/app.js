@@ -61,7 +61,7 @@ loginForm.addEventListener("submit", async (event) => {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("../database.json");
+        const response = await fetch("database.json");
 
         if (!response.ok) {
             throw new Error("Could not load database.");

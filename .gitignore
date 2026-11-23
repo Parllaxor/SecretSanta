@@ -2,6 +2,7 @@
 credentials.txt
 names.txt
 output.txt
+passwords.json
 
 # Python files
 __pycache__/

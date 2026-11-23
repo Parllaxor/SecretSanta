@@ -57,7 +57,7 @@ loginForm.addEventListener("submit", async (event) => {
     message.textContent = "Checking credentials...";
     result.hidden = true;
 
-    const username = document.getElementById("username").value.trim();
+    const username = document.getElementById("username").value.trim().toLowerCase();
     const password = document.getElementById("password").value;
 
     try {
